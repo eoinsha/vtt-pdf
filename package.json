@@ -1,0 +1,33 @@
+{
+  "name": "vtt-pdf",
+  "version": "1.0.0",
+  "description": "Generate PDF Slides from WebVTT Subtitles",
+  "bin": {
+    "vtt-pdf": "bin/run.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "postversion": "git push origin HEAD && git push origin v${npm_package_version}",
+    "test": "echo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/eoinsha/vtt-pdf.git"
+  },
+  "keywords": [
+    "vtt",
+    "pdf",
+    "convert"
+  ],
+  "author": "Eoin Shanaghy <eoin@showpiper.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eoinsha/vtt-pdf/issues"
+  },
+  "homepage": "https://github.com/eoinsha/vtt-pdf#readme",
+  "dependencies": {
+    "@typopro/dtp-pacifico": "^3.4.9",
+    "pdfkit": "^0.8.0",
+    "vtt-cue-object": "^1.0.1"
+  }
+}
