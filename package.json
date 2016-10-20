@@ -1,6 +1,6 @@
 {
   "name": "vtt-pdf",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Generate PDF Slides from WebVTT Subtitles",
   "bin": {
     "vtt-pdf": "bin/run.js"
