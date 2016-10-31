@@ -2,20 +2,23 @@
 
 var VttPdf = require('..');
 
-var args = process.argv.slice(2);
+var argv = require('yargs')
+  .usage('$0 [-c cuesPerPage] input.vtt output.pdf')
+  .alias('c', 'cues')
+  .number('c')
+  .describe('c', 'Number of cues per page')
+  .demand(2)
+  .help('h')
+  .argv;
 
-if (args.length !== 2) {
-  printUsage();
-  process.exit(-1);
+var options = {};
+if (argv.c) {
+  options.cuesPerPage = parseInt(argv.c);
 }
 
-VttPdf(args[0], args[1], function(err) {
+VttPdf(argv._[0], argv._[1], options, function(err) {
   if (err) {
     console.error(err);
     process.exit(1);
   }
 });
-
-function printUsage() {
-  console.error(process.argv.slice(0, 2).join(' '), 'vttFilePath', 'pdfFilePath');
-}

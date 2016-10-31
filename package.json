@@ -30,6 +30,7 @@
     "lodash.chunk": "^4.2.0",
     "pdfkit": "^0.8.0",
     "randomcolor": "^0.4.4",
-    "vtt-cue-object": "^1.0.1"
+    "vtt-cue-object": "^1.0.1",
+    "yargs": "^6.3.0"
   }
 }

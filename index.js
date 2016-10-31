@@ -19,9 +19,8 @@ var paperDotSizes = {
   }
 };
 
-var cuesPerPage = 3;
-
-module.exports = function(vttFile, pdfFile, done) {
+module.exports = function(vttFile, pdfFile, options, done) {
+  var cuesPerPage = (options && options.cuesPerPage) || 3;
   var paperSize = 'letter';
   var pageLayout = 'landscape';
 
